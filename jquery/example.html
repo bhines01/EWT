@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>Hello World!!</p>
+    <p id="myId">Hello World!!</p>
+    <p class="myClass">Hello World!!</p>
+    <a href="#">My Link</a><br />
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <script>
+      //This example shows how can select DOM elements by element name, id, class, and attribute
+      $(document).ready(function () {
+        $("p").css("color", "red");
+        $("#myId").css({ color: "green", "margin-top": "100px" });
+        $(".myClass").css("color", "purple");
+        $("[href]").css("color", "#777");
+
+        $("#hide").on("click", function () {
+          $("#myId").hide();
+        });
+
+        $("#show").on("click", function () {
+          $("#myId").show();
+        });
+
+        $("#toggle").on("click", function () {
+          $(".myClass").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
